@@ -1,27 +1,4 @@
 <h1> Stanbic Bank API Assessment</h1>
-<p> To get started..... <p>
-
-```
-Clone the repository
-```
-
-<p> then..<p>
-
-```
-cd into stanbic
-```
-
-<p> then..<p>
-
-```
-run pip install -r requirement.txt
-```
-
-<p> then..<p>
-
-```
-run python manage.py runserver
-```
 
 <p>The project covers 6 endpoints in the assessment. They are as follows: </p>
 <ol>
@@ -35,6 +12,43 @@ run python manage.py runserver
     <li>Delete a customer and all linked accounts.</li>
 
 </ol>
+
+
+<h3> To get started..... <h3>
+
+<ul>
+<li>Clone the repository</li>
+
+```
+git clone https://github.com/mikekwabs/stanbic-api.git
+```
+
+<p> then..<p>
+
+<li>Change directory to the project</li>
+
+```
+cd into stanbic
+```
+
+<p> then..<p>
+
+<li>Install dependencies</li>
+
+```
+run pip install -r requirement.txt
+```
+
+<p> then..<p>
+
+<li>run the development server</li>
+
+```
+run python manage.py runserver
+```
+
+</ul>
+
 
 <p> Next: </p>
 
