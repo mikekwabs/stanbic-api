@@ -9,7 +9,7 @@ class CustomerInfo(models.Model):
     email = models.EmailField()
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
 
@@ -24,9 +24,9 @@ class AccountInfo(models.Model):
     account_number = models.CharField(max_length=20)
     opening_amount = models.DecimalField(max_digits=10, decimal_places=2)
     current_balance = models.DecimalField(max_digits=10, decimal_places=2)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
+    customer = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
 
 
     class Meta:

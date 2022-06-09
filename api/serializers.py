@@ -9,6 +9,7 @@ class AccountInfoSerializer(serializers.ModelSerializer):
 
 
 class CustomerInfoSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = CustomerInfo
-        fields = ['name','email','phone_number','date_created','updated_at']
+        fields = ['id','name','email','phone_number','date_created','updated_at']
