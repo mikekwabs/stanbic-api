@@ -50,6 +50,6 @@ run python manage.py runserver
 
 <p> Next: </p>
 
-<ol>
+<ul>
     <li> Implement signals</li>
-</ol>
+</ul>
