@@ -13,7 +13,6 @@
 
 </ol>
 
-
 <h3> To get started..... <h3>
 
 <ul>
@@ -49,12 +48,8 @@ run python manage.py runserver
 
 </ul>
 
-
 <p> Next: </p>
 
 <ol>
-    <li>Finish up with the endpoints </li>
-    <li> Include validators for the fields </li>
     <li> Implement signals</li>
-    <li> Customize API</li>
 </ol>

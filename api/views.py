@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from api.models import CustomerInfo,AccountInfo
 from api.serializers import AccountInfoSerializer,CustomerInfoSerializer
 
+
+
 # Create your views here.
 
 #Add a new customer
@@ -123,7 +125,7 @@ class AddNewAccountAPI(generics.GenericAPIView):
         
         
 
-class RetrieveAccountsByPhone(APIView):
+class RetrieveAccountsByPhoneAPI(APIView):
     serializer_class = AccountInfoSerializer
 
     def get(self, request, pk,*args, **kwargs):
@@ -136,8 +138,31 @@ class RetrieveAccountsByPhone(APIView):
             return Response({'message': 'Account is not found.'},status=status.HTTP_404_NOT_FOUND)
 
             
+class RetrieveAccountsByEmailAPI(APIView):
+    serializer_class = AccountInfoSerializer
+
+    def get(self, request,pk,*args, **kwargs):
+        try:
+            customer = CustomerInfo.objects.get(email = pk)
+            accounts = AccountInfo.objects.filter(customer = customer)
+            serializer = AccountInfoSerializer(accounts, many=True)
+            return Response(serializer.data, status= status.HTTP_200_OK)
+        except AccountInfo.DoesNotExist:
+            return Response({'message': 'Account is not found.'},status=status.HTTP_404_NOT_FOUND)
+
             
-            
+
+class DeleteCustomerAndAllLinkedAccAPI(APIView):
+
+    def delete(self, request, pk,*args, **kwargs):
+        customer = CustomerInfo.objects.get(id = pk)
+        accounts = AccountInfo.objects.all().filter(customer = customer)
+        if customer and accounts:
+            accounts.delete()
+            customer.delete()
+            return Response({'message':'Customer deleted successfully.'})
+        else:
+            return Response({'message':'Customer does not exist.'},status=status.HTTP_404_NOT_FOUND)
 
 
 

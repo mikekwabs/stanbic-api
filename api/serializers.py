@@ -12,4 +12,4 @@ class CustomerInfoSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = CustomerInfo
-        fields = ['id','name','email','phone_number','date_created','updated_at']
+        fields = ['id','name','email','phone_number','date_of_birth','date_created']
