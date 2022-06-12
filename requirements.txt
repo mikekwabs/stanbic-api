@@ -3,6 +3,6 @@ Django==3.2.13
 django-cors-headers==3.13.0
 djangorestframework==3.13.1
 gunicorn==20.1.0
-Pillow==8.4.0
+Pillow>=9.0.1
 pytz==2022.1
 sqlparse==0.4.2
