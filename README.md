@@ -54,4 +54,4 @@ run python manage.py runserver
     <li> Implement signals</li>
 </ol>
 
-<p> Please send a PR if you interested in expanding the database or any suggestions you think will be beneficial.</p>
+<p> Please send a PR if you interested in expanding the database or any suggestions you think will be beneficial</p>
