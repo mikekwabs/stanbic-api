@@ -17,7 +17,7 @@ jobs:
           uses: nyakaz73/heroku-django-deploy@v0.68
           with:
             heroku_app_name : ${{secrets.stanbic}}
-            heroku_api_key: ${{ secrets.22dde127-eeb9-4507-a65c-1c209e847c83}}
+            heroku_api_key: ${{ secrets.HEROKU_API_KEY}}
             heroku_email_address: 'mikekobby10@gmail.com'
             use_git: true
             git_branch: master
