@@ -12,7 +12,7 @@ jobs:
       name: Git Deploy job- A job to deploy django app to heroku
       steps:
         - name: Checkout
-          uses: action/checkout@v3
+          uses: actions/checkout@v3
         - name: Deploy django to heroku
           uses: nyakaz73/heroku-django-deploy@v0.68
           with:
