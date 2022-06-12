@@ -1,5 +1,7 @@
 <h1> Stanbic Bank API Assessment</h1>
 
+<link href="https://drive.google.com/file/d/1kabiADaQmHQRHQoe3u9dmmfCsQlZkj1o/view?usp=sharing">Link to the assessment can be found here</link>
+
 <p>The project covers 6 endpoints in the assessment. They are as follows: </p>
 <ol>
     <li>Add a new customer.  {http://127.0.0.1:8000/api/add-customer/}</li>
